@@ -31,7 +31,11 @@ function getNumbers(number) {
 function getEvenNumbers(number) {
     let array = [];
     for(let i = 2; i <= number; i += 2) {
-        array.push(i);
+        if(isEven(i) === false) {
+            break;
+        } else {
+            array.push(i);
+        }
     }
     return array;
 }
