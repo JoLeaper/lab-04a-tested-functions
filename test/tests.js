@@ -16,21 +16,21 @@ function divide(numberOne, numberTwo) {
     return numberOne / numberTwo;
 }
 
-function isEven(x) {
-    return x % 2 === 0;
+function isEven(number) {
+    return number % 2 === 0;
 }
 
-function getNumbers(x) {
+function getNumbers(number) {
     let array = [];
-    for(let i = 1; i <= x; i++) {
+    for(let i = 1; i <= number; i++) {
         array.push(i);
     }
     return array;
 }
 
-function getEvenNumbers(x) {
+function getEvenNumbers(number) {
     let array = [];
-    for(let i = 2; i <= x; i += 2) {
+    for(let i = 2; i <= number; i += 2) {
         array.push(i);
     }
     return array;
@@ -106,11 +106,10 @@ test('divide', function(assert) {
 test('isEven', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 6;
     const expected = true;
     //Act 
     // Call the function you're testing and set the result to a const
-    const evenOrOdd = isEven(x);
+    const evenOrOdd = isEven(6);
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(expected, evenOrOdd);
@@ -120,11 +119,10 @@ test('isEven', function(assert) {
 test('getNumbers', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 5;
     const expected = [1, 2, 3, 4, 5];
     //Act 
     // Call the function you're testing and set the result to a const
-    const numberArray = getNumbers(x);
+    const numberArray = getNumbers(5);
     //Assert
     // Make assertions about what is expected valid result
     assert.deepEqual(expected, numberArray);
@@ -133,11 +131,10 @@ test('getNumbers', function(assert) {
 test('getEvenNumbers', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 9;
     const expected = [2, 4, 6, 8];
     //Act 
     // Call the function you're testing and set the result to a const
-    const evenArray = getEvenNumbers(x);
+    const evenArray = getEvenNumbers(9);
     //Assert
     // Make assertions about what is expected valid result
     assert.deepEqual(expected, evenArray);
