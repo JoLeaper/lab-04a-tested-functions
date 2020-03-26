@@ -31,9 +31,7 @@ function getNumbers(number) {
 function getEvenNumbers(number) {
     let array = [];
     for(let i = 2; i <= number; i += 2) {
-        if(isEven(i) === false) {
-            break;
-        } else {
+        if(isEven(i) === true) {
             array.push(i);
         }
     }
