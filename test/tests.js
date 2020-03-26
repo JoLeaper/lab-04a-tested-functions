@@ -22,20 +22,35 @@ function isEven(x) {
 
 function getNumbers(x) {
     let array = [];
-    debugger;
-    for(let i = 2; i < x; i + 2) {
+    for(let i = 1; i <= x; i++) {
         array.push(i);
     }
     return array;
 }
 
-// function fizzBuzz() {
-    // for (let i = 0; i < number, i++) {
-    //     let
-    // }
-    // for(let i = 0; i < Array.length; i++)
-    // if (array[i])
-//}
+function getEvenNumbers(x) {
+    let array = [];
+    for(let i = 2; i <= x; i += 2) {
+        array.push(i);
+    }
+    return array;
+}
+
+function fizzBuzz(x) {
+    let array = [];
+    for(let i = 1; i < x; i++) {
+        if(i % 3 === 0 && i % 5 === 0) {
+            array.push('fizzbuzz');
+        } else if(i % 5 === 0) {
+            array.push('buzz');
+        } else if(i % 3 === 0) {
+            array.push('fizz');
+        } else {
+            array.push(i);
+        }
+    }
+}
+
 test('add', function(assert) {
     //Arrange
     // Set up your parameters and expectations
@@ -105,16 +120,43 @@ test('isEven', function(assert) {
     assert.equal(expected, evenOrOdd);
 });
 
+
 test('getNumbers', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const x = 5;
+    const expected = [1, 2, 3, 4, 5];
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const numberArray = getNumbers(x);
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(expected, numberArray);
+});
+
+test('getEvenNumbers', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const x = 9;
     const expected = [2, 4, 6, 8];
     //Act 
     // Call the function you're testing and set the result to a const
-    debugger;
-    const evenArray = getNumbers(x);
+    const evenArray = getEvenNumbers(x);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(expected, evenArray);
+    assert.deepEqual(expected, evenArray);
+});
+
+
+test('fizzBuzz', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const x = 16;
+    const expected = [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz'];
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const fizzBuzzArray = fizzBuzz(x);
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(expected, fizzBuzzArray);
 });
