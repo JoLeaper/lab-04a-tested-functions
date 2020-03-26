@@ -49,6 +49,7 @@ function fizzBuzz(x) {
             array.push(i);
         }
     }
+    return array;
 }
 
 test('add', function(assert) {
