@@ -97,15 +97,16 @@ test('multiply', function(assert) {
 test('divide', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 10;
-    const y = 5;
-    const expected = 2;
+    const expected1 = 2;
+    const expected2 = Infinity;
     //Act 
     // Call the function you're testing and set the result to a const
-    const quotient = divide(x, y);
+    const result1 = divide(10, 5);
+    const result2 = divide(7, 0);
     //Assert
     // Make assertions about what is expected valid result
-    assert.equal(expected, quotient);
+    assert.equal(expected1, result1);
+    assert.equal(expected2, result2);
 });
 
 test('isEven', function(assert) {
