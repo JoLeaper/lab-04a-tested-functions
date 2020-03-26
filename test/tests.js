@@ -1,19 +1,19 @@
 const test = QUnit.test;
 
-function add(x, y) {
-    return x + y;
+function add(numberOne, numberTwo) {
+    return numberOne + numberTwo;
 }
 
-function subtract(x, y) {
-    return x - y;
+function subtract(numberOne, numberTwo) {
+    return numberOne - numberTwo;
 }
 
-function multiply(x, y) {
-    return x * y;
+function multiply(numberOne, numberTwo) {
+    return numberOne * numberTwo;
 }
 
-function divide(x, y) {
-    return x / y;
+function divide(numberOne, numberTwo) {
+    return numberOne / numberTwo;
 }
 
 function isEven(x) {
@@ -55,12 +55,10 @@ function fizzBuzz(x) {
 test('add', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 10;
-    const y = 5;
     const expected = 15;
     //Act 
     // Call the function you're testing and set the result to a const
-    const sum = add(x, y);
+    const sum = add(10, 5);
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(expected, sum);
@@ -69,12 +67,10 @@ test('add', function(assert) {
 test('subtract', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 10;
-    const y = 5;
     const expected = 5;
     //Act 
     // Call the function you're testing and set the result to a const
-    const difference = subtract(x, y);
+    const difference = subtract(10, 5);
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(expected, difference);
@@ -83,12 +79,10 @@ test('subtract', function(assert) {
 test('multiply', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 10;
-    const y = 5;
     const expected = 50;
     //Act 
     // Call the function you're testing and set the result to a const
-    const product = multiply(x, y);
+    const product = multiply(10, 5);
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(expected, product);
