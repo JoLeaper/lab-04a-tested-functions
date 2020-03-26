@@ -36,9 +36,9 @@ function getEvenNumbers(number) {
     return array;
 }
 
-function fizzBuzz(x) {
+function fizzBuzz(number) {
     let array = [];
-    for(let i = 1; i < x; i++) {
+    for(let i = 1; i < number; i++) {
         if(i % 3 === 0 && i % 5 === 0) {
             array.push('fizzbuzz');
         } else if(i % 5 === 0) {
@@ -144,11 +144,10 @@ test('getEvenNumbers', function(assert) {
 test('fizzBuzz', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const x = 16;
     const expected = [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzbuzz'];
     //Act 
     // Call the function you're testing and set the result to a const
-    const fizzBuzzArray = fizzBuzz(x);
+    const fizzBuzzArray = fizzBuzz(16);
     //Assert
     // Make assertions about what is expected valid result
     assert.deepEqual(expected, fizzBuzzArray);
